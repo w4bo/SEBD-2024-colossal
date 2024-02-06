@@ -1,4 +1,12 @@
-\documentclass[preprint,12pt,authoryear]{elsarticle} %
+%% The first command in your LaTeX source must be the \documentclass command.
+%%
+%% Options:
+%% twocolumn : Two column layout.
+%% hf: enable header and footer.
+\documentclass[
+% twocolumn,
+% hf,
+]{ceurart}
 \usepackage[utf8]{inputenc}
 % \usepackage{cite}
 \usepackage{amsmath,amssymb,amsfonts}
@@ -9,7 +17,6 @@
 \usepackage{url}
 \usepackage{subcaption}
 \usepackage{pifont}
-\usepackage[usenames,dvipsnames]{xcolor}
 \usepackage{cleveref}
 \usepackage{caption}
 \usepackage{subcaption}
@@ -46,23 +53,46 @@
 \newtheorem{formula}{Formula}
 \newtheorem{proof}{Proof}
 
-\journal{Expert Systems with Applications}
+%%
+%% end of the preamble, start of the body of the document source.
 \begin{document}
-\begin{frontmatter}
-\author{Matteo Francia\corref{cor1}}\ead{m.francia@unibo.it}
-\cortext[cor1]{Corresponding author.}
-\author{Enrico Gallinucci}\ead{enrico.gallinucci@unibo.it}
-\author{Matteo Golfarelli}\ead{matteo.golfarelli@unibo.it}
-% \affiliation{organization={DISI -- University of Bologna},
-%             addressline={Via dell'Università, 50}, 
-%             city={Cesena},
-%             postcode={45722}, 
-%             state={FC},
-%             country={Italy}}
-\address{DISI -- University of Bologna, Cesena, Italy}
-            
-\title{Colossal Trajectory Mining: A Unifying Approach to Mine Behavioral Mobility Patterns}
+\sloppy
+\copyrightyear{2024}
+\copyrightclause{Copyright for this paper by its authors. Use permitted under Creative Commons License Attribution 4.0 International (CC BY 4.0).}
 
+\conference{SEBD'24: Symposium on the irreproducible science,
+  June 07--11, 2022, Woodstock, NY}
+\title{Colossal Trajectory Mining}
+\author[1]{Chiara Forresi}[
+orcid=???,
+email=chiara.forresi@unibo.it
+]
+\address[1]{DISI --- University of Bologna, Cesena, Italy}
+\author[1]{Matteo Francia}[%
+orcid=???,
+email=m.francia@unibo.it
+]
+\cormark[1]
+% \fnmark[1]
+\author[1]{Enrico Gallinucci}[%
+orcid=???,
+email=enrico.gallinucci@unibo.it
+]
+\author[1]{Matteo Golfarelli}[%
+orcid=???,
+email=matteo.golfarelli@unibo.it
+]
+\author[1]{Manuele Pasini}[%
+orcid=???,
+email=manuele.pasini@unibo.it
+]
+%% Footnotes
+% \cortext[1]{Corresponding author.}
+% \fntext[1]{These authors contributed equally.}
+
+%%
+%% The abstract is a short summary of the work to be presented in the
+%% article.
 \begin{abstract}
 Spatio-temporal mobility patterns are at the core of strategic applications such as urban planning and monitoring.
 Depending on the strength of spatio-temporal constraints, different mobility patterns can be defined. 
@@ -71,12 +101,18 @@ In this paper, we introduce Colossal Trajectory Mining (CTM) to efficiently extr
 The algorithm is natively designed in a distributed fashion, and the experimental evaluation shows its scalability with respect to the involved features and the cardinality of the trajectory dataset.
 \end{abstract}
 
-\begin{keyword}
+%%
+%% Keywords. The author(s) should pick words that accurately describe
+%% the work being presented. Separate the keywords with commas.
+\begin{keywords}
 Trajectory mining \sep Mobility patterns \sep Frequent itemset mining
-\end{keyword}
-\end{frontmatter}
+\end{keywords}
 
-\sloppy
+%%
+%% This command processes the author and affiliation and title
+%% information and builds the first part of the formatted document.
+\maketitle
+
 
 \section{Introduction}\label{sec:intro}
 The spreading of Internet of Things and mobile devices \citep{vitali2021crop} stimulated the rise of applications based on mobility patterns, such as urban mobility and traffic planning \citep{DBLP:journals/tits/KumarWRLKP18}, and moving objects (MOs) profiling and linking \citep{francia2020dart,DBLP:journals/isci/FranciaGR20} where objects moving in similar locations can share interests or relationships.
@@ -1537,7 +1573,6 @@ Thus, every extension obtained from $N'$ will be obtained extending $N$ too.
 \end{proof}
 
 \balance
-\bibliographystyle{elsarticle-harv}
 \bibliography{refs}
 
 \end{document}
