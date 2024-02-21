@@ -80,7 +80,7 @@
 Spatio-temporal mobility patterns are at the core of strategic applications such as urban planning and monitoring.
 Depending on the strength of spatio-temporal constraints, different mobility patterns can be defined. 
 While existing approaches work well in the extraction of groups of objects sharing fine-grained paths, the huge volume of large-scale data asks for coarse-grained solutions.
-In this paper, we introduce Colossal Trajectory Mining (CTM) to efficiently extract heterogeneous mobility patterns out of a multidimensional space that, along with space and time dimensions, can consider additional trajectory features (e.g., means of transport or activity) to characterize behavioral mobility patterns. 
+Colossal Trajectory Mining (CTM) efficiently extracts heterogeneous mobility patterns out of a multidimensional space that, along with space and time dimensions, can consider additional trajectory features (e.g., means of transport or activity) to characterize behavioral mobility patterns. 
 The algorithm is natively designed in a distributed fashion, and the experimental evaluation shows its scalability with respect to the involved features and the cardinality of the trajectory dataset.
 \end{abstract}
 
@@ -159,9 +159,9 @@ and (iv) does not require similarity computation between trajectories, preventin
 
 The remainder of the paper is organized as follows.
 In \Cref{sec:related}, we position and compare our approach with respect to the related literature.
-In \Cref{sec:Overview}, we briefly describe CTM and motivate its adoption.
+In \Cref{sec:Overview}, we describe CTM.
 % Then, we formalize the theoretical foundations of our approach in \Cref{sec:modeling}, we provide its implementation in \Cref{sec:mining}, and we discuss its complexity in \Cref{sec:complexity}.
-Then, we formalize the theoretical foundations of our approach in \Cref{sec:modeling}, and we provide its implementation in \Cref{sec:mining}.
+% Then, we formalize the theoretical foundations of our approach in \Cref{sec:modeling}, and we provide its implementation in \Cref{sec:mining}.
 In \Cref{sec:test}, we assess the effectiveness and efficiency of CTM by leveraging both real-world and synthetic case studies. 
 Finally, we summarize our approach and future research directions in \Cref{sec:conclusion}.
 
@@ -173,7 +173,7 @@ Finally, we summarize our approach and future research directions in \Cref{sec:c
 FIM has been also applied to trajectory data to find routes \citep{DBLP:conf/ideal/QiuP16,DBLP:journals/access/FuTXZ17} or regions \citep{zheng2018spatial} frequently trafficked by MOs.
 This is an \textit{orthogonal} problem to extracting groups of objects moving together.
 %(e.g., a trajectory might support multiple routes and a route might be supported by dissimilar trajectories).
-% 
+
 Colossal itemset mining is a branch of FIM that computes FI in highly-dimensional datasets; for instance, a dataset with 30 transactions/rows/instances each with 10$^7$ items/columns \citep{DBLP:journals/bdr/ApilettiBCGPM17}.
 % With respect to CTM, 
 % Previous colossal itemset mining algorithms, such as 
@@ -218,8 +218,8 @@ groups trajectories such that intra-group similarity is maximized and inter-grou
 % \item they cannot be applied at different aggregation levels (e.g., neighborhoods and cities);
 % \item they cannot be applied to all co-movement patterns (e.g., LCSS, which returns as similar trajectories sharing a contiguous path, is not suitable for the co-location pattern where path adjacency is not required).
 % \end{itemize}
-``Classic'' clustering algorithms \textit{do not} enforce a definition of co-movement patterns (e.g., cardinality, time span, cohesion, spatial and/or temporal contiguity), flock \citep{DBLP:conf/gis/GudmundssonK06}, convoy \citep{DBLP:journals/pvldb/JeungYZJS08}, and swarm \citep{DBLP:conf/ssdbm/AungT10} patterns have been formalized.
-Since swarm \citep{DBLP:conf/ssdbm/AungT10} groups objects moving in spatial proximity for a given amount of possibly-non-contiguous time,
+Since ``classic'' clustering algorithms \textit{do not} enforce a definition of co-movement patterns (e.g., cardinality, time span, cohesion, spatial and/or temporal contiguity), flock \citep{DBLP:conf/gis/GudmundssonK06}, convoy \citep{DBLP:journals/pvldb/JeungYZJS08}, and swarm \citep{DBLP:conf/ssdbm/AungT10} patterns have been formalized.
+As swarm \citep{DBLP:conf/ssdbm/AungT10} groups objects moving in spatial proximity for a given amount of possibly-non-contiguous time,
 classical clustering algorithms can be referred to as swarms if no minimal duration is enforced.
 % Finally, all these approaches produce clusters of raw trajectories \textit{without} the possibility to cluster trajectories under custom and semantic dimensions (e.g., regions of interest, MO type, and activity).
 
@@ -261,28 +261,28 @@ classical clustering algorithms can be referred to as swarms if no minimal durat
 \begin{table}[t]
 \centering
 \scriptsize
-\caption{Comparing co-movement patterns approaches}% by supported features and pattern types and distributed implementation}
+\caption{Excerpt of the comparison with existing co-movement patterns approaches}% by supported features and pattern types and distributed implementation}
 \label{tab:related}
-\begin{tabular}{lcccccp{4cm}}
+\begin{tabular}{lcccccl}
 \toprule
 Features & Co-location & Flow & Convoy & Swarm & Distributed & Contributions \\
 \midrule
 Any & \cmark & \cmark & \cmark & \cmark & \cmark & CTM \\
 Space & - & \cmark & - & - & - & \cite{DBLP:conf/mdm/SilvaLMZC20}, \cite{yang2021scpm}, \cite{tritsarolis2021online} \\
-Space & \cmark & - & - & - & - & \cite{lv2019discovering}, \cite{tran2021spatial} \\
+% Space & \cmark & - & - & - & - & \cite{lv2019discovering}\\%\\, \cite{tran2021spatial} \\
 Space & \cmark & - & - & - & \cmark & \cite{fonseca2022multi} \\
-Space, Time & - & - & - & \cmark & - & \cite{DBLP:conf/sigmod/LeeHW07}, \cite{DBLP:journals/pvldb/LiDHK10}, \cite{DBLP:journals/tkde/HanLO17}, \cite{ailin2019movement}, \cite{li2023relaxed} \\
+Space, Time & - & - & - & \cmark & - & \cite{DBLP:conf/sigmod/LeeHW07}, \cite{DBLP:journals/pvldb/LiDHK10}\\%, \cite{DBLP:journals/tkde/HanLO17}, \cite{ailin2019movement}, \cite{li2023relaxed} \\
 Space, Time & - & - & - & \cmark & \cmark & \cite{DBLP:conf/icnc/HuKLZ15}, \cite{tampakis2019scalable} \\
 Space, Time & - & - & \cmark & - & - & \cite{DBLP:conf/ssdbm/AungT10}, \cite{DBLP:journals/pvldb/OrakzaiCP19}, \cite{DBLP:conf/cikm/Liu0LLYW21} \\
 Space, Time & - & - & \cmark & - & \cmark & \cite{DBLP:journals/geoinformatica/OrakzaiPC21}, \cite{tritsarolis2022predicting} \\
-Space, Time & - & - & \cmark & \cmark & - & \cite{DBLP:journals/dke/LiBK15}, \cite{DBLP:journals/ijitdm/PhanPT16}, \cite{helmi2020multiscale} \\
+% Space, Time & - & - & \cmark & \cmark & - & \cite{DBLP:journals/dke/LiBK15}, \cite{DBLP:journals/ijitdm/PhanPT16}, \cite{helmi2020multiscale} \\
 Space, Time & - & - & \cmark & \cmark & \cmark & \cite{DBLP:journals/pvldb/FanZWT16} \\
 Space, Time & - & \cmark & - & - & - & \cite{DBLP:journals/tmc/HanLO15}, \cite{DBLP:journals/tits/KumarWRLKP18}, \cite{DBLP:journals/pvldb/WangBCSQ19} \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\section{Approach overview}
+\section{Mining semantic co-movement patterns}
 \label{sec:Overview}
 
 % Modeling mobility pattern mining as a \textit{colossal} frequent itemset problem is a novel research direction. 
@@ -316,24 +316,116 @@ Space, Time & - & \cmark & - & - & - & \cite{DBLP:journals/tmc/HanLO15}, \cite{D
 
 Our approach is based on the following steps (\Cref{fig:overview}).
 
-\paragraph{Abstracting trajectories.}
-Raw trajectories are initially mapped to a multidimensional tessellation, a composition of multidimensional tiles (from now on, simply \textit{tiles}) of \textit{any} shape --- with no overlaps and no gaps --- that cover a multidimensional space; the tessellation \textit{is not} necessarily a regular grid.
+\subsection{Abstracting trajectories}
+
+We consider a dataset of raw trajectories, where each trajectory point is labeled with a set of features.
+Mandatory features are those needed to define spatial or spatio-temporal locations (e.g., latitude, longitude, and timestamp), but other semantic features might be available.% (e.g., speed, day of the week, and neighborhood).
+
+\begin{definition}[Raw trajectory and feature] 
+A \textit{raw trajectory} $P$ is a sequence of points $(p_1, \ldots, p_{|P|})$ generated by a MO. 
+The \textit{feature space} is a set of features $F=\{f_1,\ldots,f_{|F|}\}$ that is collected for each point.
+% ; it represents a multidimensional space where each dimension corresponds to a feature.
+\end{definition}
+
+Raw trajectories are mapped to a multidimensional tessellation, a composition of multidimensional tiles (from now on, simply \textit{tiles}) of \textit{any} shape --- with no overlaps and no gaps --- that cover a multidimensional space; the tessellation \textit{is not} necessarily a regular grid.
 % the covering of muldimensional space using one or more tiles (shapes) with no overlaps and no gaps.
 Each dimension of the tessellation corresponds to a feature describing the raw trajectory points: common features are space and time, but additional features can be added to specialize each trajectory point (e.g., whether an individual is moving by car or by bicycle).
 This allows grouping trajectories on semantic and behavioral concepts (e.g., to capture groups of individuals moving across city neighborhoods with different means of transport).
-The tessellation:
+
+\begin{definition}[Tessellation] 
+% Given a dataset of raw trajectories associated with the features $F$, 
+We call \textit{tessellation} a multidimensional partitioning $S = \{s_1, \ldots, s_m\}$ of the feature space $F$.
+Each \textit{tile} of the tessellation is identified by an $id$ and is characterized by an interval/set of values for each continuous/nominal feature in $F$.
+For each feature $f$, the function $dist_f(s_i, s_j)$ computes the distance between two tiles on the tessellation.
+Two tiles $s_i$, $s_j$ $\in S$ are  \textit{adjacent} ($s_i \cong_{f} s_j$) if $\forall s_z \in S$ it is $dist_f(s_i,s_j)\leq dist_f(s_i,s_z) + dist_f(s_z,s_j)$.
+\end{definition}
+
+% Note that $dist_f()$ is a distance between tiles used to characterize different mobility patterns.
+% Since in a colossal problem the number of tiles is  order of magnitude lower than the number of trajectories and trajectory points, computing distances between tiles entails a computational complexity that is by far lower than working on raw trajectories.
+In our implementation, the distance function is
+\begin{equation}
+dist_f(s_i,s_j) =
+\bigg \{
+\begin{array}{ll}
+f \textup{ is ordinal}  & geod(s_i,s_j) \\
+f \textup{ is nominal} \wedge s_i = s_j & 0 \\
+f \textup{ is nominal} \wedge s_i \neq s_j & \infty \\
+\end{array}
+\end{equation}
+%
+where $geod(s_i,s_j)$ is the geodesic distance \citep{bouttier2003geodesic} computed on the tessellation, which is the number of tiles along the shortest path of neighboring tiles connecting $s_i$ and $s_j$.
+
+\begin{definition}[Tile connection]\label{def:adj} 
+Two tiles $s_i,s_j$ in the tessellation $S$ are  \textit{connected} ($s_i \leftrightarrow_{f} s_j$) if there exists a path of adjacent tiles in $S$ connecting them in $f$.
+\end{definition}
+% Although in principle any distance metric can be leveraged (e.g., Haversine or Euclidean), using the geodesic distance simplifies the formalization of co-movement patterns.
+% As to nominal features (e.g., monitoring urban traffic on weather conditions such as rainy/sunny) that do not allow ordering, the distance function allows the selection of homogeneous tiles, and in turn, searches for co-movement patterns characterized by the same nominal values.
+%$s_i,s_j$ are  \textit{adjacent} ($s_i \cong_{f} s_j$) if $geod(s_i,s_j) \le 1$.
+
+A trajectory is an abstraction of a raw trajectory at the grain defined by the tessellation.
+
+\begin{definition}[Trajectory] 
+\label{def:tes}
+Given a raw trajectory $P$ and a tessellation $S$, we define the \textit{trajectory} $T$ corresponding to $P$ in $S$ as the sequence of tiles $(s_{1}, \ldots, s_{|T|})$ such that a tile $s$ is added to $T$ if at least a point $p \in P$ is in $s$.
+% ; formally, $p\in s$ if $p_f \in s_f, \forall f \in F$.
+A point $p$ \textit{is in} the tile $s$ if, for each feature in $F$, the values of the feature for $s$ contain the corresponding feature value characterizing $p$.
+\end{definition}
+
+Noticeably, the tessellation:
 % The grain of each tile determines the scale and precision of the tessellation.
 % \begin{itemize}
 % \item 
 (i) defines the level of the analysis (CTM transparently allows the extraction of patterns at neighborhood/city/country scales) 
 %(\Cref{fig:multilevtess}) 
-and (ii) compresses trajectories since a trajectory \textit{moves through} a tile if at least one of its points belongs to the tile.
+and (ii) compresses trajectories since a trajectory \textit{moves through} a tile if at least one of its points belongs to the tile (a single tile instance is added to $T$ if consecutive points fall in that tile, thus $|P| \geq |T|$).
 %(i.e., there is no need to store consecutive points from the same tile more than once). This makes the computational complexity more related to the scale of tessellation rather than to the trajectories length. For this reason, CTM is particularly suited for applications working on a huge number of, potentially long, trajectories and a coarse tessellation.
 % \item The tessellation implicitly defines similarity: the more tiles two trajectories share, the higher their similarity.
 % \end{itemize}
+% This determines a first data compression: .
 
-\paragraph{Creating transactions.}
-To each tile corresponds a transaction including the trajectories (i.e., items) moving through it.
+
+
+% \begin{example}[Tessellation, tile, and trajectory]\label{ex:trajabst}
+% With reference to \Cref{fig:patterns2}, the grid is a tessellation involving the spatial feature $f^{sp}$ which characterizes 16 tiles (i.e., cells from $A1$ to $D4$); $dist_{f^{sp}}(A1,A2) = 1$ and $dist_{f^{sp}}(A1,A3) = 2$; the point 
+% % p $\in B2$
+% $p$ is in the tile $B2$ and the trajectory $T_r=(A1,B1,B2,B3,D3)$ corresponds to the red raw trajectory within the tessellation.
+% \end{example}
+
+
+\subsection{Creating transactions}
+% To each tile corresponds a transaction including the trajectories (i.e., items) moving through it.
+
+To formalize CTM as a colossal itemset mining problem, we introduce \textit{transactions} and \textit{items}.
+% Each transaction corresponds to a tile and includes the items/trajectories moving through that tile.
+
+\begin{definition}[Item, itemset, and transaction] Given a trajectory dataset $\mathcal{T}$ and a tessellation $S$, each trajectory represents an \textit{item}, and a set $I$ of trajectories is an \textit{itemset}.
+We define the \textit{transaction} for a tile $s \in S$ as the itemset containing all the trajectories having at least a point in $s$.
+$\mathcal{Q}$, the set of all transactions, is a transaction dataset.
+\end{definition}
+
+As transactions are \textit{sets} of items, the data is further compressed: if a tile is traversed more than once by a trajectory, the transaction (tile) will contain the item (trajectory) only once.
+
+Since we are looking for trajectories sharing feature values, we need to identify the itemsets contained in a large number of transactions. 
+As for FIM, our goal is identifying the itemsets contained in a large number of transactions.
+This property is captured by the support function.
+
+\begin{definition}[Support]
+Given a transaction dataset $\mathcal{Q}$, the \textit{support} $sup(I)\subseteq\mathcal{Q}$ of an itemset $I$ is the set of transactions containing $I$.
+\end{definition}
+
+% \begin{example}[Itemset, transaction, and support]
+% With reference to \Cref{fig:patterns2}, $Q_{A1}=\{T_b,T_g,T_r\}$ is the transaction corresponding to the tile $A1$, $I=\{T_g,T_r\}$ is an itemset, and $sup(I) = \{Q_{A1}, Q_{B1}, Q_{B2}, Q_{B3}\}$.
+% \end{example}
+
+\begin{definition}[Frequent and closed itemsets]\label{def:fci}
+An itemset is $I$ \textit{frequent} (FI) if $|sup(I)|\geq mSup$, where $mSup$ is the minimum number of transactions to consider the itemset as frequent.
+A frequent itemset is \textit{closed} (FCI) if there exists no superset with the same support. 
+\end{definition}
+
+FCIs provide a lossless compression of FIs \citep{DBLP:conf/dmkd/PeiHM00} (i.e., the output is non-redundant and the complete set of FIs is recoverable) which are exponential in the number of trajectories/items \citep{DBLP:conf/vldb/AgrawalS94}. 
+Working with FCIs rather than FIs simplifies data analysis \citep{DBLP:journals/isci/FranciaGR20}.
+
+
 %
 \begin{figure}[t]
     \centering
@@ -379,6 +471,7 @@ $T_b,T_g$, and $T_r$ are trajectories while $Q_{A1}$ and $Q_{B2}$ are transactio
 % However, 
 % A frequent itemset would be composed of a set of tiles that are often crossed together, while the reference to the trajectories, which is the real objective of the analysis, would be lost.
 
+The maximum number of transactions depends on the number of tiles (i.e., $|\mathcal{Q}| = |S|$).
 Modeling trajectories as items and tiles as transactions makes our frequent itemset approach a \textit{colossal} one since the number of tiles (i.e., transactions) is typically in the order of magnitudes smaller than the number of trajectories (i.e., items). 
 This is a fair assumption to make: for instance, Milan has 88 neighborhoods with over $3 \cdot 10^6$ inhabitants (i.e., potential MOs). 
 Obviously, our assumption is no more true when a very fine tessellation is adopted.
@@ -390,103 +483,9 @@ For example, the Milan metropolitan area spans about $1500km^2$, corresponding t
 %     \label{fig:complexity}
 % \end{figure}
 
-\paragraph{Mining co-movement patterns.}
-Once a transaction dataset is created, the colossal itemset mining algorithm retrieves the sets of trajectories satisfying minimum cardinality (i.e., the number of trajectories), minimum support (i.e., the length of the shared path), and spatio-temporal constraints.
+\subsection{Mining co-movement patterns}
+We retrieve the sets of trajectories satisfying minimum cardinality (i.e., the number of trajectories), minimum support (i.e., the length of the shared path), and spatio-temporal constraints.
 Different mobility patterns can be obtained by specializing such constraints.% (as later shown).
-
-Note that approaching this problem as a colossal itemset mining rather than a typical clustering one (see \Cref{sec:related}):
-% \begin{itemize}
-    % \item 
-(i) avoids the computation of similarities that would make computational complexity explode for large datasets;
-and (ii) exploits monotonicity properties (e.g., as the generation process proceeds, the cardinality of trajectory groups decreases while the length of the path shared by trajectories in the same group increases) to filter out invalid co-movement patterns without generating them.
-%(filtering strategies are detailed in \Cref{sec:pruning}).
-% \end{itemize}
-
-\section{Modeling co-movement patterns}\label{sec:modeling}
-We consider a dataset of raw trajectories, where each trajectory point is labeled with a set of features.
-Mandatory features are those needed to define the spatial or spatio-temporal location (e.g., latitude, longitude, and timestamp), but many other physical or semantic features might be available (e.g., speed, day of the week, and neighborhood).
-
-\begin{definition}[Raw trajectory and feature] 
-A \textit{raw trajectory} $P$ is a sequence of points $(p_1, \ldots, p_{|P|})$ generated by a MO. 
-The \textit{feature space} is a set of features $F=\{f_1,\ldots,f_{|F|}\}$ that is collected for each point.
-% ; it represents a multidimensional space where each dimension corresponds to a feature.
-\end{definition}
-
-\begin{definition}[Tessellation] 
-Given a dataset of raw trajectories associated with the features $F$, we call \textit{tessellation} a multidimensional partitioning $S = \{s_1, \ldots, s_m\}$ of the feature space $F$.
-Each \textit{tile} of the tessellation is identified by an $id$ and is characterized by an interval/set of values for each continuous/nominal feature in $F$.
-For each feature $f$, the function $dist_f(s_i, s_j)$ computes the distance between two tiles on the tessellation.
-Two tiles $s_i$, $s_j$ $\in S$ are  \textit{adjacent} ($s_i \cong_{f} s_j$) if $\forall s_z \in S$ it is $dist_f(s_i,s_j)\leq dist_f(s_i,s_z) + dist_f(s_z,s_j)$.
-\end{definition}
-
-% Note that $dist_f()$ is a distance between tiles used to characterize different mobility patterns.
-% Since in a colossal problem the number of tiles is  order of magnitude lower than the number of trajectories and trajectory points, computing distances between tiles entails a computational complexity that is by far lower than working on raw trajectories.
-In our implementation, the distance function is
-\begin{equation}
-dist_f(s_i,s_j) =
-\bigg \{
-\begin{array}{ll}
-f \textup{ is ordinal}  & geod(s_i,s_j) \\
-f \textup{ is nominal} \wedge s_i = s_j & 0 \\
-f \textup{ is nominal} \wedge s_i \neq s_j & \infty \\
-\end{array}
-\end{equation}
-%
-where $geod(s_i,s_j)$ is the geodesic distance \citep{bouttier2003geodesic} computed on the tessellation, which is the number of tiles along the shortest path of neighboring tiles connecting $s_i$ and $s_j$.
-% Although in principle any distance metric can be leveraged (e.g., Haversine or Euclidean), using the geodesic distance simplifies the formalization of co-movement patterns.
-% As to nominal features (e.g., monitoring urban traffic on weather conditions such as rainy/sunny) that do not allow ordering, the distance function allows the selection of homogeneous tiles, and in turn, searches for co-movement patterns characterized by the same nominal values.
-%$s_i,s_j$ are  \textit{adjacent} ($s_i \cong_{f} s_j$) if $geod(s_i,s_j) \le 1$.
-
-\begin{definition}[Trajectory] 
-\label{def:tes}
-Given a raw trajectory $P$ and a tessellation $S$, we define the \textit{trajectory} $T$ corresponding to $P$ in $S$ as the sequence of tiles $(s_{1}, \ldots, s_{|T|})$ such that a tile $s$ is added to $T$ if at least a point $p \in P$ is in $s$.
-% ; formally, $p\in s$ if $p_f \in s_f, \forall f \in F$.
-A point $p$ \textit{is in} the tile $s$ if, for each feature in $F$, the values of the feature for $s$ contain the corresponding feature value characterizing $p$.
-\end{definition}
-
-A trajectory is an abstraction of a raw trajectory at the grain defined by the tessellation.
-This determines a first data compression: a single tile instance is added to $T$ if consecutive points fall in that tile, thus $|P| \geq |T|$.
-
-\begin{definition}[Tile connection]\label{def:adj} 
-Two tiles $s_i,s_j$ in the tessellation $S$ are  \textit{connected} ($s_i \leftrightarrow_{f} s_j$) if there exists a path of adjacent tiles in $S$ connecting them in $f$.
-\end{definition}
-
-% \begin{example}[Tessellation, tile, and trajectory]\label{ex:trajabst}
-% With reference to \Cref{fig:patterns2}, the grid is a tessellation involving the spatial feature $f^{sp}$ which characterizes 16 tiles (i.e., cells from $A1$ to $D4$); $dist_{f^{sp}}(A1,A2) = 1$ and $dist_{f^{sp}}(A1,A3) = 2$; the point 
-% % p $\in B2$
-% $p$ is in the tile $B2$ and the trajectory $T_r=(A1,B1,B2,B3,D3)$ corresponds to the red raw trajectory within the tessellation.
-% \end{example}
-
-To enable the formalization of CTM as a colossal itemset mining problem, we need to introduce \textit{transactions} and \textit{items}.
-Each transaction corresponds to a tile and includes the items/trajectories moving through that tile.
-%
-% \begin{definition}[Item, itemset, and transaction] Given a trajectory dataset $\mathcal{T}$ and a tessellation $S$, each trajectory represents an \textit{item}, and a set $I$ of trajectories is an \textit{itemset}.
-% We define the \textit{transaction} for a tile $s \in S$ as the itemset containing all the trajectories having at least a point in $s$.
-% $\mathcal{Q}$, the set of all transactions, is a transaction dataset.
-% \end{definition}
-%
-% The maximum number of transactions depends on the number of tiles (i.e., $|\mathcal{Q}| = |S|$).
-% Furthermore, as transactions are \textit{sets} of items, the data is further compressed: if a tile is traversed more than once by a trajectory, the transaction corresponding to the tile will contain the trajectory/item only once.
-%
-% Since we are looking for trajectories sharing feature values, we need to identify the itemsets contained in a large number of transactions. 
-As for FIM, our goal is identifying the itemsets contained in a large number of transactions.
-This property is captured by the support function.
-
-\begin{definition}[Support]
-Given a transaction dataset $\mathcal{Q}$, the \textit{support} $sup(I)\subseteq\mathcal{Q}$ of an itemset $I$ is the set of transactions containing $I$.
-\end{definition}
-
-% \begin{example}[Itemset, transaction, and support]
-% With reference to \Cref{fig:patterns2}, $Q_{A1}=\{T_b,T_g,T_r\}$ is the transaction corresponding to the tile $A1$, $I=\{T_g,T_r\}$ is an itemset, and $sup(I) = \{Q_{A1}, Q_{B1}, Q_{B2}, Q_{B3}\}$.
-% \end{example}
-
-\begin{definition}[Frequent and closed itemsets]\label{def:fci}
-An itemset is \textit{frequent} (FI) if $|sup(I)|\geq mSup$, where $mSup$ is the minimum number of transactions to consider the itemset as frequent.
-A frequent itemset is \textit{closed} (FCI) if there exists no superset with the same support. 
-\end{definition}
-
-FCIs provide a lossless compression of FIs \citep{DBLP:conf/dmkd/PeiHM00} (i.e., the output is non-redundant and the complete set of FIs is recoverable) which are exponential in the number of trajectories/items \citep{DBLP:conf/vldb/AgrawalS94}. 
-Working with FCIs rather than FIs simplifies data analysis \citep{DBLP:journals/isci/FranciaGR20}.
 
 \begin{definition}[Co-movement pattern]\label{def:comov}
 A \textit{co-movement pattern} $I$ is a FCI s.t. $|I| \ge mCrd$, where $mCrd$ is the minimum number of trajectories to consider a FCI as a co-movement pattern.
@@ -523,11 +522,12 @@ Convoy      & $f^{sp}, f^{tm}$ & \specialcell{$\exists S' \subseteq sup(I)$ s.t.
 % \end{enumerate}
 % As summarized in \Cref{tbl:constraints2}, 
 Co-location and flow are defined over a spatial feature ($f^{sp}$; i.e., they are required to happen in the same spatial tile), while swarm and convoy require both spatial ($f^{sp}$) and temporal ($f^{tm}$) features (i.e., they are required to happen in the same spatio-temporal tiles).
-In other words, while for swarm and convoy it is necessary to be in the same spatio-temporal tile, co-location and flow only require to be in the same spatial tile (e.g., to be in the same location even if at different times).
+In other words, while for swarm and convoy it is necessary to be in the same spatio-temporal tile, co-location and flow only require to be in the same spatial tile (e.g., same location even if at different times).
 % A strong point of CTM is the capability to homogeneously manage space, time, and any additional semantic feature.
+
 Although the simplest representation of the space and time features is a regular binning of their absolute values, CTM allows adopting abstractions richer in semantics as long as these determine a tessellation (i.e., a partitioning) of space and time.
 %For example, space can be partitioned into neighborhoods or regions, while time can be arranged in a finite set of categorical values such as holidays-working days, morning-afternoon-night, and so on. 
-
+%
 % \subsection{Handling additional features through behavioral constraints}
 % \label{sec:constr}
 % Co-movement patterns are described by more than space and time features alone.
@@ -537,9 +537,9 @@ Although the simplest representation of the space and time features is a regular
 %
 Characterizing co-movement patterns with additional features means imposing additional constraints, which we call \textit{behavioral} constraints. 
 Note that behavioral constraints are more expressive than filtering trajectories based on a specific feature value since they further characterize objects that \textit{behaves similarly} while moving in space and time; for instance, behavioral features are highly important in the linkage/anonymization of mobility data \citep{DBLP:journals/tkde/JinHFCOZ23}.
-In CTM, behavioral constraints are transparently enforced by simply extending the input tessellation with additional features (see \Cref{def:tes}): the tile directly models the features in the tessellation.
-More formally, two or more trajectories \textit{share} a tile $s$ if they have at least a point in $s$. Then, the support of an itemset $I$ (i.e., a set of trajectories), includes all and only the transactions (i.e., the tiles) shared by the trajectories.
-The behavioral constraints must be computed jointly with the spatio-temporal ones, and not before/after running CTM.
+In CTM, behavioral constraints are transparently enforced by simply extending the input tessellation with additional features (see \Cref{def:tes}, the tile directly models the features in the tessellation).
+More formally, two or more trajectories \textit{share} a tile $s$ if they have at least a point in $s$. Then, the support of an itemset $I$ (a set of trajectories), includes all and only the transactions (tiles) shared by the trajectories.
+Note that the behavioral constraints must be computed jointly with the spatio-temporal ones, and not before/after running CTM.
 % \begin{itemize}
 %     \item A \textit{pre-processing strategy} could apply behavioral constraints directly to the raw trajectory dataset (i.e., before applying CTM). 
 %     At this stage, only filters on single trajectories can be applied.
@@ -596,8 +596,6 @@ The behavioral constraints must be computed jointly with the spatio-temporal one
 %     \label{fig:allpatterns}
 % \end{figure}
 
-
-\section{Mining co-movement patterns}\label{sec:mining}
 % We initially remind that trajectories are mapped to items and tiles are mapped to transactions.
 % For the sake of clarity, henceforth we only refer to the items and transactions.
 
@@ -628,14 +626,15 @@ The enumeration process can be represented as an enumeration tree, where each no
 corresponds to a distinct closed itemset.
 % set of transactions $\bar{\mathcal{Q}}$.
 % We call \textit{enumeration sequence} the path leading from the root to a node $N$.
-Naively enumerating the whole tree is inefficient, we exploit several pruning mechanisms to limit the enumerated portion of the tree.
-We conceive CTM as a parallel and big-data approach for co-movement pattern mining, thus it exploits solutions that would be neither necessary nor optimal in a centralized implementation.
+Naively enumerating the whole tree is inefficient, thus we exploit several pruning mechanisms to limit the enumerated portion of the tree.
+We conceive CTM as a parallel and big-data approach for co-movement pattern mining.
+%, thus it exploits solutions that would be neither necessary nor optimal in a centralized implementation.
 Specifically, CTM:
 % \begin{itemize}
 % \item 
 (i) adopts a breadth-first enumeration approach to fully exploit task parallelization and workload balancing;
 % \item 
-(ii) adopts local pruning criteria only to avoid centralized checks that would limit parallelization;
+(ii) adopts local pruning criteria to avoid centralized checks that would limit parallelization;
 % \item 
 (iii) adopts spatio-temporal pruning criteria that have been specifically devised for trajectories-related patterns;
 % \item 
@@ -643,9 +642,15 @@ Specifically, CTM:
 to locally compute the itemset support.
 % This is a reasonable assumption since following our approach, its size is limited and can fit the central memory (see \Cref{sec:test}).
 % \end{itemize}
+For the sake of space, the details of the enumeration process are omitted and are available in the extended version \cite{DBLP:journals/eswa/FranciaGG24}.
 
-For the sake of space, the details of the enumeration process are omitted.
-The approach has been implemented in Spark and is available at \url{https://github.com/big-unibo/ctm}.
+Note that approaching this problem as a colossal itemset mining rather than a typical clustering one 
+% \begin{itemize}
+    % \item 
+(i) avoids the computation of similarities that would make computational complexity explode for large datasets;
+and (ii) exploits monotonicity properties (e.g., as the generation process proceeds, the cardinality of trajectory groups decreases while the length of the path shared by trajectories in the same group increases) to filter out invalid co-movement patterns without generating them all.
+%(filtering strategies are detailed in \Cref{sec:pruning}).
+% \end{itemize}
 
 % We now introduce the enumeration process, the pruning techniques, and, finally, how we distribute the algorithm to support scalable generation of co-movement patterns.
 
@@ -1008,9 +1013,8 @@ The approach has been implemented in Spark and is available at \url{https://gith
 %     \label{tab:features}%
 % \end{table}%
 
-
-
 \section{Evaluation}\label{sec:test}
+The approach has been implemented in Spark and is available at \url{https://github.com/big-unibo/ctm}.
 All tests run on a cluster of 10 nodes, each equipped with an 8-core i7 CPU@3.60GHz and 16 GB of RAM and interconnected by Gigabit Ethernet.
 We tested CTM on several use cases and scalability tests, but for the sake of space we only report the results on a real-world dataset.% \sf{Milan}.
 % , \sf{Oldenburg}, and \sf{Hermoupolis}) we use to assess the \mf{
@@ -1065,12 +1069,12 @@ Trajectories are sparse in time since they represent inhabitants as well as trav
 \caption{KPIs by dataset and pattern type}
 \label{tab:effpatterns}%
 \begin{tabular}{l|ccccccc}
-\multicolumn{1}{c}{} & \multicolumn{7}{c}{\sf{Milan ($mCrd=100$, $mSup=12$) }} \\
+% \multicolumn{1}{c}{} & \multicolumn{7}{c}{\sf{Milan}} \\ % ($mCrd=100$, $mSup=12$) 
 \toprule
 Type    & $|S|$ & Patterns         & Enum.       & Time (s)  & Shape check & Card. check & Red. check \\
 \midrule
 Flow    & 88    & $9.7 \cdot 10^4$ & $2.1 \cdot 10^7$ & 31  & 53\%  & 82\% & 30\%\\
-Co-loc. & 88    & $2.3 \cdot 10^5$ & $2.6 \cdot 10^7$ & 44  & 31\%  & 82\% & 31\%\\
+Co-locaction & 88    & $2.3 \cdot 10^5$ & $2.6 \cdot 10^7$ & 44  & 31\%  & 82\% & 31\%\\
 Convoy\tablefootnote{Due to the sparsity in time, no convoy pattern is returned in the \sf{Milan} dataset. }  & 528   & 0                & $5.5 \cdot 10^8$ & 180 & 1\%   & 99\% & 90\%\\
 Swarm   & 528   & $124$            & $3.0 \cdot 10^8$ & 127 & 8.2\% & 98\% & 70\%\\
 \bottomrule
@@ -1099,17 +1103,17 @@ Swarm   & 528   & $124$            & $3.0 \cdot 10^8$ & 127 & 8.2\% & 98\% & 70\
 % To mine co-movement patterns with CTM, it is first necessary to identify the business question and then to properly set the tessellation. 
 % Tessellations can be built out of diverse types of features, features can be continuous (e.g., speed) or discrete (e.g., means of transport), absolute (e.g., timestamp) or aggregated (e.g., hour bins), geometric (e.g., latitude/longitude) or semantic (e.g., administrative neighborhoods and municipalities, as in \Cref{fig:multilevtess}).
 %
-The dataset has been collected during the urban mobility analysis project \textit{``La città intorno''} (\url{https://lacittaintorno.fondazionecariplo.it/}) that aims to understand the mobility patterns of inhabitants living in suburban neighborhoods.
+The dataset has been collected during the urban mobility analysis project \textit{``La città intorno''} (\url{https://lacittaintorno.fondazionecariplo.it/}) that aims to understand the mobility patterns of inhabitants living in suburban neighborhoods
 % In the context of urban planning, \textit{``La città intorno''} focused 
 and to rank neighborhoods by their attractiveness in order to understand how to allocate economic resources for requalification.
 The attractiveness of a neighborhood is defined as the percentage of co-movement patterns passing through that neighborhood.
 To fulfill the analysis, we initially define a tessellation where the spatial feature represents the 88 neighborhoods in Milan 
 %(\Cref{fig:milnil}) 
 and the temporal feature represents a relative dimension that partitions absolute timestamps into six bins, such as night (from 0 to 3) and morning (from 8 to 11); overall $|S| = 88 \cdot 6 = 528$ tiles.
-Then, together with domain experts, we set relevant values for $mCrd$ and $mSup$. 
+Then, together with domain experts, we set relevant values for $mCrd$ (100) and $mSup$ (7). 
 % \Cref{fig:qualitativeswarm} depicts an example of a swarm pattern for $mCrd=100$ and $mSup=7$ in which at least 100 people follow the same path around the city center in the morning and from the city center to the central station in the afternoon.
-\Cref{tab:effpatterns} reports the outcomes for all datasets and all co-movement pattern types.
-\Cref{tbl:att} shows the results of our attractiveness analysis, highlighting the need for higher requalification in ``Lodi - Corvetto", ``Padova", and ``Adriano"; the most attractive neighborhoods are the ones closest to the city center\footnote{By filtering tiles on the time bin, it is possible to characterize how attractiveness changes during the day.}.
+\Cref{tab:effpatterns} reports the outcomes for all co-movement pattern types.
+\Cref{tbl:att} shows the results of our attractiveness analysis using swarm patterns, highlighting the need for higher requalification in ``Lodi - Corvetto", ``Padova", and ``Adriano"; the most attractive neighborhoods are the ones closest to the city center\footnote{By filtering tiles on the time bin, it is possible to characterize how attractiveness changes during the day.}.
 
 \begin{table}[t]
     \centering
@@ -1478,8 +1482,9 @@ Then, together with domain experts, we set relevant values for $mCrd$ and $mSup$
 
 % \subsection{Comparison}\label{ssec:comparison}
 % \mf{
-Finally, we tested CTM against SPARE \citep{DBLP:journals/pvldb/FanZWT16} (the only big-data approach to the extraction of \textit{generic} co-movement patterns), and PFPGrowth \citep{DBLP:conf/recsys/LiWZZC08} (a big data approach to Frequent Itemset Mining).
-CTM scalability proves to be better than the others for big groups of trajectories.
+Finally, we tested CTM against SPARE \citep{DBLP:journals/pvldb/FanZWT16} (the only big-data approach to the extraction of \textit{generic} co-movement patterns), and PFPGrowth \citep{DBLP:conf/recsys/LiWZZC08} (a big data approach to Frequent Itemset Mining) on two synthetic datasets \sf{Oldenburg} and \sf{Hermoupolis}.
+For the sake of space, the details of the scalability testing process are omitted and are available in the extended version \cite{DBLP:journals/eswa/FranciaGG24}.
+Overall, CTM scalability proves to be better than the others for big groups of trajectories.
 
 % Before diving into the comparison, we first list the main features distinguishing CTM and SPARE.
 % }
