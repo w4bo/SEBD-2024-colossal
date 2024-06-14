@@ -1,0 +1,35 @@
+﻿Paper,Features,Co-location,Flow,Convoy,Swarm,Distributed,Notes,Name,Group (Platoon),Year,STrj,T,C,mSup,mCrd
+CTM,Any,\cmark,\cmark,\cmark,\cmark,\cmark,,Colossal,-,2023,O,O,\cmark,\cmark,\cmark
+\cite{li2023relaxed},"Space, Time",-,-,-,\cmark,-,,Relaxed group pattern detection over massive-scale trajectories, ,2023,,,,\cmark,\cmark
+\cite{fonseca2022multi},Space,\cmark,-,-,-,\cmark,,A multi-agent system for solving the Dynamic Capacitated Vehicle Routing Problem with stochastic customers using trajectory data mining, ,2022,,,,-,-
+\cite{tritsarolis2022predicting},"Space, Time",-,-,\cmark,-,\cmark,,Predicting Co-movement patterns in mobility data, ,2022,,,,\cmark,\cmark
+\cite{tran2021spatial},Space,\cmark,-,-,-,-,,A spatial co-location pattern mining framework insensitive to prevalence thresholds based on overlapping cliques, ,2021,,,,,
+\cite{orakzai2021distributed},"Space, Time",-,-,\cmark,-,\cmark,,Distributed mining of convoys in large scale datasets, ,2021,,,,,
+\cite{DBLP:conf/cikm/Liu0LLYW21},"Space, Time",-,-,\cmark,-,-,,ECMA: An Efficient Convoy Mining Algorithm for Moving Objects, ,2021,,,,,
+\cite{bao2021mining},Space,\cmark,-,-,-,-,,Mining Non-Redundant Co-Location Patterns, ,2021,,,,,
+\cite{tritsarolis2021online},Space,-,\cmark,-,-,-,,Online discovery of co-movement patterns in mobility data, ,2021,,,,,
+\cite{yang2021scpm},Space,-,\cmark,-,-,-,,SCPM-CR: A Novel Method for Spatial Co-location Pattern Mining with Coupling Relation Consideration, ,2021,,,,,
+\cite{wang2021spatial},,,,,,,,Spatial Co-location Pattern Discovery Incorporating Fuzzy Theory,  ,2021,,,,,
+\cite{helmi2020multiscale},"Space, Time",-,-,\cmark,\cmark,-,,Multiscale frequent co-movement pattern mining, ,2020,,,,,
+\cite{DBLP:conf/mdm/SilvaLMZC20},Space,-,\cmark,-,-,-,,Online clustering of trajectories in road networks, ,2020,,,,,
+\cite{lv2019discovering},Space,\cmark,-,-,-,-,,Discovering individual movement patterns from cell-id trajectory data by exploiting handoff features, ,2019,,,,,
+\cite{DBLP:journals/pvldb/WangBCSQ19},"Space, Time",-,\cmark,-,-,-,k-path,Fast Large-Scale Trajectory Clustering, ,2019,P,P,-,-,-
+\cite{DBLP:journals/pvldb/OrakzaiCP19},"Space, Time",-,-,\cmark,-,-,,k/2-hop: Fast Mining of Convoy Patterns With Effective Pruning,\cmark,2019,O,O,-,\cmark,\cmark
+\cite{ailin2019movement},"Space, Time",-,-,-,\cmark,-,,Movement Pattern Extraction Based on a Non-parameter Sub-trajectory Clustering Algorithm,-,2019,P,O,-,-,-
+\cite{tampakis2019scalable},"Space, Time",-,-,-,\cmark,\cmark,,Scalable Distributed Subtrajectory Clustering, ,2019,P,O,-,-,-
+\cite{DBLP:journals/tits/KumarWRLKP18},"Space, Time",-,\cmark,-,-,-,,Fast and Scalable Big Data Trajectory Clustering for Understanding Urban Mobility, ,2018,P,P,-,-,-
+\cite{DBLP:journals/tkde/HanLO17},"Space, Time",-,-,-,\cmark,-,,A Systematic Approach to Clustering Whole Trajectories of Mobile Objects in Road Networks,-,2017,P,P,-,-,-
+\cite{wang2017redundancy},,,,,,,,Redundancy Reduction for Prevalent Co-Location Patterns, ,2017,,,,,
+\cite{DBLP:journals/pvldb/FanZWT16},"Space, Time",-,-,\cmark,\cmark,\cmark, ,A General and Parallel Platform for Mining Co-Movement Patterns over Large-scale Trajectories,\cmark,2016,P,O,-,\cmark,\cmark
+\cite{DBLP:journals/ijitdm/PhanPT16},"Space, Time",-,-,\cmark,\cmark,-,,All in One: Mining Multiple Movement Patterns,\cmark,2016,O,O,\cmark,\cmark,\cmark
+\cite{DBLP:journals/eswa/BerminghamL15},Any,-,-,-,\cmark,-,only clustering,A general methodology for n-dimensional trajectory clustering,-,2015,P,O,-,-,\cmark
+\cite{DBLP:journals/dke/LiBK15},"Space, Time",-,-,\cmark,\cmark,-,,Efficient mining of platoon patterns in trajectory databases,\cmark,2015,O,O,-,\cmark,\cmark
+\cite{DBLP:conf/icnc/HuKLZ15},"Space, Time",-,-,-,\cmark,\cmark,,Parallel clustering of big data of spatio-temporal trajectory,-,2015,P,P,-,\cmark,\cmark
+\cite{DBLP:journals/tmc/HanLO15},"Space, Time",-,\cmark,-,-,-,,"Road-Network Aware Trajectory Clustering:
+Integrating Locality, Flow, and Density", ,2015,P,O,-,-,\cmark
+\cite{DBLP:conf/ssdbm/AungT10},"Space, Time",-,-,\cmark,-,-,,Discovery of Evolving Convoys, ,2010,O,O,-,\cmark,\cmark
+\cite{DBLP:journals/pvldb/LiDHK10},"Space, Time",-,-,-,\cmark,-,,Swarm: Mining Relaxed Temporal Moving Object Clusters, ,2010,O,O,-,\cmark,\cmark
+\cite{DBLP:conf/sigmod/LeeHW07},"Space, Time",-,-,-,\cmark,-,,Trajectory Clustering: A Partition-and-Group Framework, ,2007,P,O,-,-,\cmark
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,

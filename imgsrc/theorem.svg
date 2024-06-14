@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="51.330048mm"
+   height="49.81776mm"
+   viewBox="0 0 51.330048 49.81776"
+   version="1.1"
+   id="svg511"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   sodipodi:docname="theorem.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview513"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.78127806"
+     inkscape:cx="124.15554"
+     inkscape:cy="157.43435"
+     inkscape:window-width="1920"
+     inkscape:window-height="1057"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs508">
+    <clipPath
+       id="clip0">
+      <rect
+         x="323"
+         y="308"
+         width="217"
+         height="210"
+         id="rect515" />
+    </clipPath>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-72.206129,-107.16638)">
+    <g
+       clip-path="url(#clip0)"
+       transform="matrix(0.26458333,0,0,0.26458333,-16.126068,24.087211)"
+       id="g644">
+      <rect
+         x="386"
+         y="357"
+         width="43"
+         height="89"
+         fill="#d0cece"
+         id="rect520" />
+      <rect
+         x="343"
+         y="314"
+         width="86"
+         height="44"
+         fill="#d0cece"
+         id="rect522" />
+      <path
+         d="M 0,0 1.04987e-4,170.477"
+         stroke="#d0cece"
+         stroke-width="0.666667"
+         stroke-miterlimit="8"
+         stroke-dasharray="2.66667, 2"
+         fill="none"
+         fill-rule="evenodd"
+         transform="matrix(1,0,0,-1,343.5,485.978)"
+         id="path524" />
+      <path
+         d="M 343.5,402.5 H 514.38"
+         stroke="#d0cece"
+         stroke-width="0.666667"
+         stroke-miterlimit="8"
+         stroke-dasharray="2.66667, 2"
+         fill="none"
+         fill-rule="evenodd"
+         id="path526" />
+      <path
+         d="M 343.5,445.5 H 514.38"
+         stroke="#d0cece"
+         stroke-width="0.666667"
+         stroke-miterlimit="8"
+         stroke-dasharray="2.66667, 2"
+         fill="none"
+         fill-rule="evenodd"
+         id="path528" />
+      <path
+         d="M 343.5,315.5 H 514.38"
+         stroke="#d0cece"
+         stroke-width="0.666667"
+         stroke-miterlimit="8"
+         stroke-dasharray="2.66667, 2"
+         fill="none"
+         fill-rule="evenodd"
+         id="path530" />
+      <path
+         d="M 343.5,358.5 H 514.38"
+         stroke="#d0cece"
+         stroke-width="0.666667"
+         stroke-miterlimit="8"
+         stroke-dasharray="2.66667, 2"
+         fill="none"
+         fill-rule="evenodd"
+         id="path532" />
+      <path
+         d="M 0,0 1.04987e-4,170.516"
+         stroke="#d0cece"
+         stroke-width="0.666667"
+         stroke-miterlimit="8"
+         stroke-dasharray="2.66667, 2"
+         fill="none"
+         fill-rule="evenodd"
+         transform="matrix(1,0,0,-1,386.5,486.016)"
+         id="path534" />
+      <path
+         d="M 0,0 1.04987e-4,170.328"
+         stroke="#d0cece"
+         stroke-width="0.666667"
+         stroke-miterlimit="8"
+         stroke-dasharray="2.66667, 2"
+         fill="none"
+         fill-rule="evenodd"
+         transform="matrix(1,0,0,-1,429.5,485.829)"
+         id="path536" />
+      <path
+         d="M 0,0 1.04987e-4,170.516"
+         stroke="#d0cece"
+         stroke-width="0.666667"
+         stroke-miterlimit="8"
+         stroke-dasharray="2.66667, 2"
+         fill="none"
+         fill-rule="evenodd"
+         transform="matrix(1,0,0,-1,471.5,486.016)"
+         id="path538" />
+      <path
+         d="M 0,0 1.04987e-4,170.521"
+         stroke="#d0cece"
+         stroke-width="0.666667"
+         stroke-miterlimit="8"
+         stroke-dasharray="2.66667, 2"
+         fill="none"
+         fill-rule="evenodd"
+         transform="matrix(1,0,0,-1,514.5,486.021)"
+         id="path540" />
+      <path
+         d="M 343.5,485.5 H 514.38"
+         stroke="#d0cece"
+         stroke-width="0.666667"
+         stroke-miterlimit="8"
+         stroke-dasharray="2.66667, 2"
+         fill="none"
+         fill-rule="evenodd"
+         id="path542" />
+      <path
+         d="m 361,349 h 31.535"
+         stroke="#70ad47"
+         stroke-width="2"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         fill="none"
+         fill-rule="evenodd"
+         id="path544" />
+      <path
+         d="m 398,354 v 12.047"
+         stroke="#70ad47"
+         stroke-width="2"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         fill="none"
+         fill-rule="evenodd"
+         id="path546" />
+      <path
+         d="m 398,376 0.235,12.72"
+         stroke="#70ad47"
+         stroke-width="2"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         fill="none"
+         fill-rule="evenodd"
+         id="path548" />
+      <path
+         d="m 398,420 v 43.46"
+         stroke="#70ad47"
+         stroke-width="2"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         fill="none"
+         fill-rule="evenodd"
+         id="path550" />
+      <path
+         d="M 0,0 34.6356,1.04987e-4"
+         stroke="#70ad47"
+         stroke-width="2"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         fill="none"
+         fill-rule="evenodd"
+         transform="matrix(-1,0,0,1,392.636,468)"
+         id="path552" />
+      <path
+         d="m 361,335 h 55.93"
+         stroke="#ff0000"
+         stroke-width="2"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         fill="none"
+         fill-rule="evenodd"
+         id="path554" />
+      <path
+         d="m 422,340 v 38.368"
+         stroke="#ff0000"
+         stroke-width="2"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         fill="none"
+         fill-rule="evenodd"
+         id="path556" />
+      <path
+         d="m 422,388 v 38.871"
+         stroke="#ff0000"
+         stroke-width="2"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         fill="none"
+         fill-rule="evenodd"
+         id="path558" />
+      <path
+         d="m 427,431 h 73.812"
+         stroke="#ff0000"
+         stroke-width="2"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         fill="none"
+         fill-rule="evenodd"
+         id="path560" />
+      <path
+         d="m 361,321 h 41.106"
+         stroke="#5b9bd5"
+         stroke-width="2"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         fill="none"
+         fill-rule="evenodd"
+         id="path562" />
+      <path
+         d="m 412,321 h 41.224"
+         stroke="#5b9bd5"
+         stroke-width="2"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         fill="none"
+         fill-rule="evenodd"
+         id="path564" />
+      <path
+         d="m 463,321 h 27.812"
+         stroke="#5b9bd5"
+         stroke-width="2"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         fill="none"
+         fill-rule="evenodd"
+         id="path566" />
+      <text
+         font-family="'Times New Roman', 'Times New Roman_MSFontService', sans-serif"
+         font-weight="400"
+         font-size="19px"
+         transform="translate(358.521,502)"
+         id="text594">A<tspan
+   font-size="19px"
+   x="41.9403"
+   y="0"
+   id="tspan568">B</tspan><tspan
+   font-size="19px"
+   x="83.880501"
+   y="0"
+   id="tspan570">C</tspan><tspan
+   font-size="19px"
+   x="126.999"
+   y="0"
+   id="tspan572">D</tspan><tspan
+   font-size="19px"
+   x="160.495"
+   y="-161"
+   id="tspan574">1</tspan><tspan
+   font-size="19px"
+   x="160.495"
+   y="-118"
+   id="tspan576">2</tspan><tspan
+   font-size="19px"
+   x="160.495"
+   y="-75"
+   id="tspan578">3</tspan><tspan
+   font-size="19px"
+   x="160.495"
+   y="-32"
+   id="tspan580">4</tspan><tspan
+   font-size="16px"
+   x="-25.1514"
+   y="-174"
+   id="tspan582">T</tspan><tspan
+   font-size="11px"
+   x="-15.3181"
+   y="-171"
+   id="tspan584">b</tspan><tspan
+   font-size="16px"
+   x="-24.484699"
+   y="-150"
+   id="tspan586">T</tspan><tspan
+   font-size="11px"
+   x="-14.6514"
+   y="-147"
+   id="tspan588">g</tspan><tspan
+   font-size="16px"
+   x="125.075"
+   y="-80"
+   id="tspan590">T</tspan><tspan
+   font-size="11px"
+   x="134.34801"
+   y="-77"
+   id="tspan592">r</tspan></text>
+      <path
+         d="m 398,398 v 12.72"
+         stroke="#70ad47"
+         stroke-width="2"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         fill="none"
+         fill-rule="evenodd"
+         id="path596" />
+      <path
+         d="m 398.5,420.5 v 12.721"
+         stroke="#70ad47"
+         stroke-width="0.666667"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         fill="none"
+         fill-rule="evenodd"
+         id="path598" />
+      <path
+         d="m 495,326 0.058,12.53"
+         stroke="#5b9bd5"
+         stroke-width="2"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         fill="none"
+         fill-rule="evenodd"
+         id="path600" />
+      <path
+         d="M 0,0 28.1768,1.04987e-4"
+         stroke="#5b9bd5"
+         stroke-width="2"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         fill="none"
+         fill-rule="evenodd"
+         transform="matrix(-1,0,0,1,490.177,344)"
+         id="path602" />
+      <rect
+         x="386"
+         y="358"
+         width="44"
+         height="87"
+         stroke="#002060"
+         stroke-width="2"
+         stroke-miterlimit="8"
+         stroke-dasharray="2, 2"
+         fill="none"
+         id="rect604" />
+      <path
+         d="m 352.5,322 c 0,-2.485 2.015,-4.5 4.5,-4.5 2.485,0 4.5,2.015 4.5,4.5 0,2.485 -2.015,4.5 -4.5,4.5 -2.485,0 -4.5,-2.015 -4.5,-4.5 z"
+         stroke="#41719c"
+         stroke-width="1.33333"
+         stroke-miterlimit="8"
+         fill="#5b9bd5"
+         fill-rule="evenodd"
+         id="path606" />
+      <path
+         d="m 402.5,322 c 0,-2.485 2.239,-4.5 5,-4.5 2.761,0 5,2.015 5,4.5 0,2.485 -2.239,4.5 -5,4.5 -2.761,0 -5,-2.015 -5,-4.5 z"
+         stroke="#41719c"
+         stroke-width="1.33333"
+         stroke-miterlimit="8"
+         fill="#5b9bd5"
+         fill-rule="evenodd"
+         id="path608" />
+      <path
+         d="m 453.5,322 c 0,-2.485 2.239,-4.5 5,-4.5 2.761,0 5,2.015 5,4.5 0,2.485 -2.239,4.5 -5,4.5 -2.761,0 -5,-2.015 -5,-4.5 z"
+         stroke="#41719c"
+         stroke-width="1.33333"
+         stroke-miterlimit="8"
+         fill="#5b9bd5"
+         fill-rule="evenodd"
+         id="path610" />
+      <path
+         d="m 491.5,322 c 0,-2.485 2.015,-4.5 4.5,-4.5 2.485,0 4.5,2.015 4.5,4.5 0,2.485 -2.015,4.5 -4.5,4.5 -2.485,0 -4.5,-2.015 -4.5,-4.5 z"
+         stroke="#41719c"
+         stroke-width="1.33333"
+         stroke-miterlimit="8"
+         fill="#5b9bd5"
+         fill-rule="evenodd"
+         id="path612" />
+      <path
+         d="m 352.5,335.5 c 0,-2.761 2.015,-5 4.5,-5 2.485,0 4.5,2.239 4.5,5 0,2.761 -2.015,5 -4.5,5 -2.485,0 -4.5,-2.239 -4.5,-5 z"
+         stroke="#ae5a21"
+         stroke-width="1.33333"
+         stroke-miterlimit="8"
+         fill="#ff0000"
+         fill-rule="evenodd"
+         id="path614" />
+      <path
+         d="m 417.5,335.5 c 0,-2.761 2.239,-5 5,-5 2.761,0 5,2.239 5,5 0,2.761 -2.239,5 -5,5 -2.761,0 -5,-2.239 -5,-5 z"
+         stroke="#ae5a21"
+         stroke-width="1.33333"
+         stroke-miterlimit="8"
+         fill="#ff0000"
+         fill-rule="evenodd"
+         id="path616" />
+      <path
+         d="m 417.5,383.5 c 0,-2.761 2.239,-5 5,-5 2.761,0 5,2.239 5,5 0,2.761 -2.239,5 -5,5 -2.761,0 -5,-2.239 -5,-5 z"
+         stroke="#ae5a21"
+         stroke-width="1.33333"
+         stroke-miterlimit="8"
+         fill="#ff0000"
+         fill-rule="evenodd"
+         id="path618" />
+      <path
+         d="m 417.5,431.5 c 0,-2.761 2.239,-5 5,-5 2.761,0 5,2.239 5,5 0,2.761 -2.239,5 -5,5 -2.761,0 -5,-2.239 -5,-5 z"
+         stroke="#ae5a21"
+         stroke-width="1.33333"
+         stroke-miterlimit="8"
+         fill="#ff0000"
+         fill-rule="evenodd"
+         id="path620" />
+      <path
+         d="m 501.5,431.5 c 0,-2.761 2.015,-5 4.5,-5 2.485,0 4.5,2.239 4.5,5 0,2.761 -2.015,5 -4.5,5 -2.485,0 -4.5,-2.239 -4.5,-5 z"
+         stroke="#ae5a21"
+         stroke-width="1.33333"
+         stroke-miterlimit="8"
+         fill="#ff0000"
+         fill-rule="evenodd"
+         id="path622" />
+      <path
+         d="m 352.5,349.5 c 0,-2.761 2.015,-5 4.5,-5 2.485,0 4.5,2.239 4.5,5 0,2.761 -2.015,5 -4.5,5 -2.485,0 -4.5,-2.239 -4.5,-5 z"
+         stroke="#507e32"
+         stroke-width="1.33333"
+         stroke-miterlimit="8"
+         fill="#70ad47"
+         fill-rule="evenodd"
+         id="path624" />
+      <path
+         d="m 393.5,349.5 c 0,-2.761 2.239,-5 5,-5 2.761,0 5,2.239 5,5 0,2.761 -2.239,5 -5,5 -2.761,0 -5,-2.239 -5,-5 z"
+         stroke="#507e32"
+         stroke-width="1.33333"
+         stroke-miterlimit="8"
+         fill="#70ad47"
+         fill-rule="evenodd"
+         id="path626" />
+      <path
+         d="m 393.5,371.5 c 0,-2.761 2.239,-5 5,-5 2.761,0 5,2.239 5,5 0,2.761 -2.239,5 -5,5 -2.761,0 -5,-2.239 -5,-5 z"
+         stroke="#507e32"
+         stroke-width="1.33333"
+         stroke-miterlimit="8"
+         fill="#70ad47"
+         fill-rule="evenodd"
+         id="path628" />
+      <path
+         d="m 393.5,416 c 0,-2.485 2.239,-4.5 5,-4.5 2.761,0 5,2.015 5,4.5 0,2.485 -2.239,4.5 -5,4.5 -2.761,0 -5,-2.015 -5,-4.5 z"
+         stroke="#507e32"
+         stroke-width="1.33333"
+         stroke-miterlimit="8"
+         fill="#70ad47"
+         fill-rule="evenodd"
+         id="path630" />
+      <path
+         d="m 393.5,469 c 0,-2.485 2.239,-4.5 5,-4.5 2.761,0 5,2.015 5,4.5 0,2.485 -2.239,4.5 -5,4.5 -2.761,0 -5,-2.015 -5,-4.5 z"
+         stroke="#507e32"
+         stroke-width="1.33333"
+         stroke-miterlimit="8"
+         fill="#70ad47"
+         fill-rule="evenodd"
+         id="path632" />
+      <path
+         d="m 349.5,469 c 0,-2.485 2.015,-4.5 4.5,-4.5 2.485,0 4.5,2.015 4.5,4.5 0,2.485 -2.015,4.5 -4.5,4.5 -2.485,0 -4.5,-2.015 -4.5,-4.5 z"
+         stroke="#507e32"
+         stroke-width="1.33333"
+         stroke-miterlimit="8"
+         fill="#70ad47"
+         fill-rule="evenodd"
+         id="path634" />
+      <path
+         d="m 393.5,393.5 c 0,-2.761 2.239,-5 5,-5 2.761,0 5,2.239 5,5 0,2.761 -2.239,5 -5,5 -2.761,0 -5,-2.239 -5,-5 z"
+         stroke="#507e32"
+         stroke-width="1.33333"
+         stroke-miterlimit="8"
+         fill="#70ad47"
+         fill-rule="evenodd"
+         id="path636" />
+      <path
+         d="m 393.5,438.5 c 0,-2.761 2.239,-5 5,-5 2.761,0 5,2.239 5,5 0,2.761 -2.239,5 -5,5 -2.761,0 -5,-2.239 -5,-5 z"
+         stroke="#507e32"
+         stroke-width="1.33333"
+         stroke-miterlimit="8"
+         fill="#70ad47"
+         fill-rule="evenodd"
+         id="path638" />
+      <path
+         d="m 491.5,344 c 0,-2.485 2.015,-4.5 4.5,-4.5 2.485,0 4.5,2.015 4.5,4.5 0,2.485 -2.015,4.5 -4.5,4.5 -2.485,0 -4.5,-2.015 -4.5,-4.5 z"
+         stroke="#41719c"
+         stroke-width="1.33333"
+         stroke-miterlimit="8"
+         fill="#5b9bd5"
+         fill-rule="evenodd"
+         id="path640" />
+      <path
+         d="m 453.5,344 c 0,-2.485 2.015,-4.5 4.5,-4.5 2.485,0 4.5,2.015 4.5,4.5 0,2.485 -2.015,4.5 -4.5,4.5 -2.485,0 -4.5,-2.015 -4.5,-4.5 z"
+         stroke="#41719c"
+         stroke-width="1.33333"
+         stroke-miterlimit="8"
+         fill="#5b9bd5"
+         fill-rule="evenodd"
+         id="path642" />
+    </g>
+  </g>
+</svg>
